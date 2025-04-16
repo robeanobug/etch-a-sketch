@@ -1,0 +1,1 @@
+This project is going to be a browser version of something between a sketchpad and etch-a-sketch.
