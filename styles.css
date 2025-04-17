@@ -4,15 +4,23 @@
     box-sizing: border-box;
 }
 
+h1 {
+    margin: 20px;
+}
+
 .container {
-    border: 2px solid black;
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
+    width: 680px;
 }
 
 .square {
     border: 2px solid pink;
     width: 40px;
     height: 40px;
+}
+
+.square:hover {
+    background-color: pink;
 }
