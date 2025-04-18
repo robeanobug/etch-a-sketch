@@ -21,4 +21,11 @@ function makeGrid(size) {
     });
 }
 
+const reset = document.querySelector("#reset");
+reset.addEventListener("click",  () => {
+    container.innerHTML = "";
+    gridSize = prompt("Enter the number of pixels you want for your X or Y axis:");
+    makeGrid(gridSize);
+})
+
 makeGrid(gridSize);
