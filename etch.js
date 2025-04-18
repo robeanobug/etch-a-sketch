@@ -1,5 +1,5 @@
 const container = document.querySelector(".container");
-let gridSize = 100;
+let gridSize = 16;
 
 function makeGrid(size) {
     const totalSquares = size ** 2;
@@ -25,7 +25,16 @@ const reset = document.querySelector("#reset");
 reset.addEventListener("click",  () => {
     container.innerHTML = "";
     gridSize = prompt("Enter the number of pixels you want for your X or Y axis:");
-    makeGrid(gridSize);
+
+    gridSize = Number(gridSize);
+
+    if (!Number.isInteger(gridSize)) {
+        alert("ERROR: Input should be a whole number.");
+    } else if (gridSize < 0 || gridSize > 100) {
+        alert("ERROR: Number should be between 0 and 100.");
+    } else {
+        makeGrid(gridSize);
+    }
 })
 
 makeGrid(gridSize);
